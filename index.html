@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMSIT Mini Ecommerce</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'> -->
+    
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- home section starts  -->
+    <section class="head">
+        <div class="container">
+
+            <!-- for navbar  -->
+            <nav class="navbar navbar-expand-lg bg-white py-3 py-lg-4 sticky-top d-print-none">
+                <div class="container-fluid p-0">
+                  <a class="navbar-brand fw-bold fs-3" href="#">MMS <span class="text-danger">IT</span></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                      <li class="nav-item ms-3">
+                        <a class="nav-link text-dark fw-semibold" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item ms-3">
+                        <a class="nav-link text-dark fw-semibold" href="#items">Products</a>
+                      </li>
+                      <li class="nav-item ms-3">
+                        <a class="nav-link text-dark fw-semibold" href="#" data-bs-toggle="modal" data-bs-target="#invoiceModal" id="showInvoice">Invoice</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+
+            <div class="d-print-none">
+                <div class="row">
+                    <div class="col-lg-6 d-lg-none">
+                        <div class="h-100">
+                            <img src="./imgs/home22.png" alt="" class="w-75 d-block ms-auto">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column justify-content-center h-100">
+                            <h4 class="display-3 fw-normal mt-3 mt-lg-0">Your Body your Choice</h4>
+                            <p class="fs-5 my-3 text-justify">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quidem sint iure repellat possimus magni nesciunt a, earum ratione sequi incidunt officia! Eos enim dicta nesciunt aspernatur ipsum cupiditate mollitia?
+                            </p>
+                            <a class="btn btn-danger btn-sm mt-3 w-40 d-lg-none py-2 fs-6" href="#items">More Items</a>
+                            <a class="btn btn-danger btn-sm mt-3 w-25 d-none d-lg-block py-2 fs-6" href="#items">More Items</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block">
+                        <div class="h-100">
+                            <img src="./imgs/home22.png" alt="" class="w-75 d-block ms-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- for products  -->
+            <div class="container mt-5 position-relative d-print-none pt-5" id="items">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h2 class="fw-semibold text-black-50">Products</h2>
+                        </div>
+                        <hr>
+                        <select class="form-select w-15 d-none d-lg-block" aria-label="Default select example" id="select">
+                            <option value="1">Under 50$</option>
+                            <option value="2">Upper 50$</option>
+                            <option value="3">View All</option>
+                        </select>
+                        <select class="form-select w-50 d-lg-none" aria-label="Default select example" id="select">
+                            <option value="1">Under 50$</option>
+                            <option value="2">Upper 50$</option>
+                            <option value="3">View All</option>
+                        </select>
+                    </div>
+                    <div class="row main-row g-3 mb-5 mx-auto">
+
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Shopping</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row "  id="card-body">
+                                    
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-outline-success addInvoice">Add Invoice</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+
+            <!-- for invoice  -->
+            <div class="invoice-show">
+                
+                <!-- Modal -->
+                <div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title ms-lg-3" id="exampleModalLabel">MMS <span class="text-danger">IT</span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <p class="text-center mb-0">Thanks for shopping with us</p>
+                        <div class="modal-body">
+                            <div class="mx-lg-3">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th class="w-25">Item</th>
+                                            <th class="text-end">Price</th>
+                                            <th class="text-end">Qty</th>
+                                            <th class="text-end">Cost</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="trow">
+                                       
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" class="text-center fw-semibold">Total Cost</td>
+                                            <td class="text-end total"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-print-none">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="window.print()">Print</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- home section ends  -->
+
+
+    <!-- footer section starts  -->
+    <section class="footer bg-dark">
+        <div class="container">
+            <div class="row pb-3 pt-5">
+                <div class="col-lg-6">
+                    <div class="text-white">
+                        <h3 class="text-white">MMS <span class="text-danger">IT</span></h3>
+                        <p>Phone : +09784993920</p>
+                        <p>Address - Yangon, Bahan</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-white">
+                        <form action="" class="form">
+                            <label for="">Your Email</label><br>
+                            <input type="email" name="" id="" class="w-75 px-2 py-2 form-control text-dark">
+                            <button type="submit" class="btn btn-primary mt-2 btn-sm">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- items section starts  -->
+
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
