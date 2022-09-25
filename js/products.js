@@ -156,6 +156,6 @@ showInvoice.addEventListener("click",function(){
     },0)
     // console.log(costItem);
 
-    total.innerText=totalCost +" $";
+    total.innerText=totalCost.toFixed(2) +" $";
 
 });
