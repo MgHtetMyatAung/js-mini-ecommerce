@@ -17,10 +17,20 @@
   height: 250px;
   object-fit: contain;
   object-position: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.item-img:hover {
+  transform: scale(1.1);
 }
 
 .buy-item {
   cursor: pointer;
+}
+
+.select-change {
+  width: 200px !important;
 }
 
 @media (max-width: 480px) {
@@ -29,6 +39,9 @@
     height: 150px !important;
     object-fit: contain;
     object-position: center;
+  }
+  .select-change {
+    width: 150px !important;
   }
 }
 .align-baseline {
