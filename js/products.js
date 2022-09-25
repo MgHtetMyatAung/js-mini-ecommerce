@@ -12,7 +12,7 @@ select.addEventListener("change",()=>{
             if(x.price>50){
                 main.innerHTML+=`
                 <div class="col-lg-3">
-                    <div class="border border-2 p-3">
+                    <div class="border p-3 shadow-sm rounded">
                         <div class="">
                             <img src="${x.image}" class="item-img" alt="">
                         </div>
@@ -36,7 +36,7 @@ select.addEventListener("change",()=>{
             if(x.price<50){
                 main.innerHTML+=`
                 <div class="col-lg-3">
-                    <div class="border border-2 p-3">
+                    <div class="border p-3 shadow-sm rounded">
                         <div class="">
                             <img src="${x.image}" class="item-img" alt="">
                         </div>
@@ -59,7 +59,7 @@ select.addEventListener("change",()=>{
         products.forEach(x=>{
                 main.innerHTML+=`
                 <div class="col-lg-3">
-                    <div class="border border-2 p-3">
+                    <div class="border p-3 shadow-sm rounded">
                         <div class="">
                             <img src="${x.image}" class="item-img" alt="">
                         </div>

@@ -11,7 +11,7 @@ if(select.value==1){
         if(x.price<50){
             main.innerHTML+=`
             <div class="col-lg-3">
-                <div class="border border-2 p-3 shadow-sm">
+                <div class="border p-3 shadow-sm rounded">
                     <div class="">
                         <img src="${x.image}" class="item-img" alt="">
                     </div>
